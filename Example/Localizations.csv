@@ -1,0 +1,12 @@
+id,key,en,fr,es,de
+app_name,app.name,My App,Mon App,Mi App,Meine App
+app_tagline,app.tagline,The best app ever.,La meilleure app.,La mejor aplicación.,Die beste App.
+welcome_title,welcome.title,Welcome!,Bienvenue !,¡Bienvenido!,Willkommen!
+welcome_subtitle,welcome.subtitle,"Get started, it's easy.","C'est facile, commencez.","Comienza, es fácil.","Legen Sie los, es ist einfach."
+button_ok,button.ok,OK,OK,OK,OK
+button_cancel,button.cancel,Cancel,Annuler,Cancelar,Abbrechen
+button_retry,button.retry,Retry,Réessayer,Reintentar,Erneut versuchen
+error_network,error.network,Network error. Please try again.,Erreur réseau. Veuillez réessayer.,Error de red. Inténtalo de nuevo.,Netzwerkfehler. Bitte versuche es erneut.
+error_unknown,error.unknown,An unknown error occurred.,Une erreur inconnue s'est produite.,Ocurrió un error desconocido.,Ein unbekannter Fehler ist aufgetreten.
+greeting_format,greeting.format,"Hello, %@!","Bonjour, %@ !","¡Hola, %@!","Hallo, %@!"
+item_count_format,list.item_count,"%d item","%d élément","%d elemento","%d Element"
