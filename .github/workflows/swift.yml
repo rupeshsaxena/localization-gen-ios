@@ -20,8 +20,8 @@ jobs:
       run: swift build -v
     - name: Run tests
       run: swift test --enable-code-coverage
-    - name: Check Coverage Threshold
-      uses: mattpolzin/swift-codecov-action@0.7.5
+    - name: Check Coverage
+      uses: alexanderweiss/swift-coverage-action@v1.0.0
       with:
         # Set this to your package name to exclude external dependencies
         PROJECT_NAME: "LocalizationTool" 
