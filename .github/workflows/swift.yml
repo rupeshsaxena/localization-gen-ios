@@ -23,6 +23,7 @@ jobs:
     - name: Generate and upload coverage report to Codecov
       uses: codecov/codecov-action@v4
       with:
+        token: ${{ secrets.CODECOV_TOKEN }}
         files: ./DerivedData/**/*.lcov # The path to the generated coverage data
         flags: unittests
         name: codecov-umbrella
