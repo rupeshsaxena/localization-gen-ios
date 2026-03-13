@@ -19,12 +19,11 @@ jobs:
     - name: Build
       run: swift build -v
     - name: Run tests
-      run: swift test -v
-    - name: Generate and upload coverage report to Codecov
-      uses: codecov/codecov-action@v4
+      run: swift test --enable-code-coverage
+    - name: Check Coverage Threshold
+      uses: mattpolzin/swift-codecov-action@v0.1.0
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        files: ./DerivedData/**/*.lcov # The path to the generated coverage data
-        flags: unittests
-        name: codecov-umbrella
-        fail_ci_if_error: true
+        # Set this to your package name to exclude external dependencies
+        PROJECT_NAME: "LocalizationTool" 
+        # Minimum coverage percentage (0.0 to 100.0)
+        MINIMUM_COVERAGE: 80.0
