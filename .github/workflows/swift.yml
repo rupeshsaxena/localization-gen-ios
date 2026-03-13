@@ -20,3 +20,10 @@ jobs:
       run: swift build -v
     - name: Run tests
       run: swift test -v
+    - name: Generate and upload coverage report to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        files: ./DerivedData/**/*.lcov # The path to the generated coverage data
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: true
