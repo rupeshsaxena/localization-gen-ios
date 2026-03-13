@@ -20,10 +20,14 @@ jobs:
       run: swift build -v
     - name: Run tests
       run: swift test --enable-code-coverage
-    - name: Check Coverage
-      uses: alexanderweiss/swift-coverage-action@v1.0.0
+    - uses: michaelhenry/swifty-code-coverage@v1.0.0
       with:
-        # Set this to your package name to exclude external dependencies
-        PROJECT_NAME: "LocalizationTool" 
-        # Minimum coverage percentage (0.0 to 100.0)
-        MINIMUM_COVERAGE: 80.0
+        build-path: .build
+        target: GithubChecksPackageTests.xctest
+        is-spm: true
+    - name: Upload to Codecov
+      run: |
+        bash <(curl https://codecov.io/bash) -f "coverage/*.info"
+      shell: bash
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
